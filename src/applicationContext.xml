@@ -12,6 +12,10 @@
         <constructor-arg ref="myFortune"/>
     </bean>
 
+    <bean id="mySwimmingCoach" class="pl.fraczek.springdemo.coaches.SwimmingCoach">
+        <property name="fortuneService" ref="myFortune"/>
+    </bean>
+
 </beans>
 
 
