@@ -5,8 +5,11 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Define your beans here -->
-    <bean id="myCoach"
-          class="pl.fraczek.springdemo.coaches.TrackCoach">
+    <bean id="myFortune" class="pl.fraczek.springdemo.fortune.HappyFortuneService">
+    </bean>
+
+    <bean id="myCoach" class="pl.fraczek.springdemo.coaches.BaseballCoach">
+        <constructor-arg ref="myFortune"/>
     </bean>
 
 </beans>
