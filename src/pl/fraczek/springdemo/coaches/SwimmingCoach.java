@@ -8,12 +8,10 @@ import pl.fraczek.springdemo.fortune.FortuneService;
 public class SwimmingCoach implements Coach {
 
     private FortuneService fortuneService;
+    private String email;
+    private String teamName;
 
     SwimmingCoach() {
-    }
-
-    public void setFortuneService(final FortuneService fortuneService) {
-        this.fortuneService = fortuneService;
     }
 
     @Override
@@ -24,5 +22,25 @@ public class SwimmingCoach implements Coach {
     @Override
     public String getDailyFortune() {
         return "Just do it: " + fortuneService.getFortune();
+    }
+
+    public void setFortuneService(final FortuneService fortuneService) {
+        this.fortuneService = fortuneService;
+    }
+
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public void setTeamName(final String teamName) {
+        this.teamName = teamName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(final String email) {
+        this.email = email;
     }
 }
