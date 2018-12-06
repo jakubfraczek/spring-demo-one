@@ -9,7 +9,7 @@
 
     <context:property-placeholder location="classpath:sport.properties"/>
     <!-- Define your beans here -->
-    <bean id="myFortune" class="pl.fraczek.springdemo.fortune.HappyFortuneService">
+    <bean id="myFortune" class="pl.fraczek.springdemo.fortune.RandomFortune">
     </bean>
 
     <bean id="myCoach" class="pl.fraczek.springdemo.coaches.BaseballCoach">
