@@ -22,4 +22,12 @@ public class TrackCoach implements Coach {
     public String getDailyFortune() {
         return fortuneService.getFortune();
     }
+
+    public void startUpMethod() {
+        System.out.println("Track coach arrived!");
+    }
+
+    public void closeDownMethod() {
+        System.out.println("Track coach is going home!");
+    }
 }

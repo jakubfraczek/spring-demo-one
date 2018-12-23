@@ -1,7 +1,6 @@
 package pl.fraczek.springdemo.main;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import pl.fraczek.springdemo.coaches.Coach;
 import pl.fraczek.springdemo.coaches.SwimmingCoach;
 
 /**
