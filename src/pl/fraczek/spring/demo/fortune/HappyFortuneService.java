@@ -1,4 +1,4 @@
-package pl.fraczek.springdemo.fortune;
+package pl.fraczek.spring.demo.fortune;
 
 /**
  * @author <a href=mailto:Jakub.Fraczek@tomtom.com>Jakub Fraczek</a>

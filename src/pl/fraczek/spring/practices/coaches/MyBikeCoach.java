@@ -1,7 +1,7 @@
-package pl.fraczek.practices.coaches;
+package pl.fraczek.spring.practices.coaches;
 
-import pl.fraczek.springdemo.coaches.Coach;
-import pl.fraczek.springdemo.fortune.FortuneService;
+import pl.fraczek.spring.demo.coaches.Coach;
+import pl.fraczek.spring.demo.fortune.FortuneService;
 
 /**
  * @author <a href=mailto:Jakub.Fraczek@tomtom.com>Jakub Fraczek</a>

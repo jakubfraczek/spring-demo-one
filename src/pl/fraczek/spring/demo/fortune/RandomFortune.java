@@ -1,6 +1,4 @@
-package pl.fraczek.practices.fortune;
-
-import pl.fraczek.springdemo.fortune.FortuneService;
+package pl.fraczek.spring.demo.fortune;
 
 import java.util.Random;
 

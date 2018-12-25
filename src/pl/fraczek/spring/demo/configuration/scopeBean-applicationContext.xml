@@ -4,18 +4,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="myFortuneService" class="pl.fraczek.springdemo.fortune.HappyFortuneService">
+    <bean id="myFortuneService" class="pl.fraczek.spring.demo.fortune.HappyFortuneService">
     </bean>
 
     <bean id="myCoach"
-          class="pl.fraczek.springdemo.coaches.BaseballCoach"
+          class="pl.fraczek.spring.demo.coaches.BaseballCoach"
           scope="singleton">
         <constructor-arg ref="myFortuneService"/>
     </bean>
     <bean id="yourCoach"
-          class="pl.fraczek.springdemo.coaches.TrackCoach"
-          init-method="startUpMethod"
-          destroy-method="closeDownMethod">
+          class="pl.fraczek.spring.demo.coaches.TrackCoach"
+          scope="prototype">
         <constructor-arg ref="myFortuneService"/>
     </bean>
 

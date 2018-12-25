@@ -1,8 +1,7 @@
-package pl.fraczek.practices.main;
+package pl.fraczek.spring.practices.main;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import pl.fraczek.practices.coaches.MyBikeCoach;
-import pl.fraczek.springdemo.coaches.Coach;
+import pl.fraczek.spring.practices.coaches.MyBikeCoach;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -15,7 +14,7 @@ public class SpringAppPractice {
 
     public static void main(String[] args) {
 
-        try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("pl/fraczek/practices/configuration/myPractice-applicationContext.xml")) {
+        try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("pl/fraczek/spring/practices/configuration/myPractice-applicationContext.xml")) {
 
             final MyBikeCoach coach = context.getBean("myCoach", MyBikeCoach.class);
             printTime();

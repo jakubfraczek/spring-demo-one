@@ -9,20 +9,20 @@
 
     <context:property-placeholder location="classpath:sport.properties"/>
     <!-- Define your beans here -->
-    <bean id="myFortune" class="pl.fraczek.springdemo.fortune.RandomFortune">
+    <bean id="myFortune" class="pl.fraczek.spring.demo.fortune.RandomFortune">
     </bean>
 
-    <bean id="myCoach" class="pl.fraczek.springdemo.coaches.BaseballCoach">
+    <bean id="myCoach" class="pl.fraczek.spring.demo.coaches.BaseballCoach">
         <constructor-arg ref="myFortune"/>
     </bean>
 
-    <bean id="mySwimmingCoach" class="pl.fraczek.springdemo.coaches.SwimmingCoach">
+    <bean id="mySwimmingCoach" class="pl.fraczek.spring.demo.coaches.SwimmingCoach">
         <property name="fortuneService" ref="myFortune"/>
         <property name="email" value="best.swimmers@swimming.com"/>
         <property name="teamName" value="BestSwimmers"/>
     </bean>
 
-    <bean id="myTennisCoach" class="pl.fraczek.springdemo.coaches.TennisCoach">
+    <bean id="myTennisCoach" class="pl.fraczek.spring.demo.coaches.TennisCoach">
         <constructor-arg ref="myFortune"/>
         <property name="email" value="${foo.email}"/>
         <property name="teamName" value="${foo.team}"/>
