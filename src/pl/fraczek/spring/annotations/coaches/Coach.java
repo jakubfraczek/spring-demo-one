@@ -6,4 +6,6 @@ package pl.fraczek.spring.annotations.coaches;
 public interface Coach {
 
     String getDailyWorkout();
+
+    String getDailyFortune();
 }

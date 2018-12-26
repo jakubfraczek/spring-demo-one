@@ -11,6 +11,7 @@ public class springApp {
         try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("pl/fraczek/spring/annotations/configuration/applicationContext.xml")) {
             final Coach tennisCoach = context.getBean("tennisCoach", Coach.class);
             System.out.println(tennisCoach.getDailyWorkout());
+            System.out.println(tennisCoach.getDailyFortune());
         }
     }
 }
