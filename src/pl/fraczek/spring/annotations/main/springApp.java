@@ -9,7 +9,7 @@ import pl.fraczek.spring.annotations.coaches.Coach;
 public class springApp {
     public static void main(String[] args) {
         try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("pl/fraczek/spring/annotations/configuration/applicationContext.xml")) {
-            final Coach tennisCoach = context.getBean("someCoach", Coach.class);
+            final Coach tennisCoach = context.getBean("tennisCoach", Coach.class);
             System.out.println(tennisCoach.getDailyWorkout());
         }
     }
