@@ -1,30 +1,28 @@
 package pl.fraczek.spring.practices.coaches;
 
-import pl.fraczek.spring.demo.coaches.Coach;
 import pl.fraczek.spring.demo.fortune.FortuneService;
 
 /**
  * @author <a href=mailto:Jakub.Fraczek@tomtom.com>Jakub Fraczek</a>
  */
-public class MyBikeCoach implements Coach {
+public class BikeParticipant implements Participant {
 
     private FortuneService fortuneService;
     private String email;
     private String teamName;
 
-    public MyBikeCoach(FortuneService fortuneService, final String email, final String teamName) {
+    public BikeParticipant(FortuneService fortuneService, final String email, final String teamName) {
         this.fortuneService = fortuneService;
         this.email = email;
         this.teamName = teamName;
     }
 
     @Override
-    public String getDailyWorkout() {
+    public String myDailyPractice() {
         return "Bike 100 km!";
     }
 
-    @Override
-    public String getDailyFortune() {
+    public String myDailyFortune() {
         return fortuneService.getFortune();
     }
 
@@ -43,5 +41,4 @@ public class MyBikeCoach implements Coach {
     public String getTeamName() {
         return teamName;
     }
-
 }

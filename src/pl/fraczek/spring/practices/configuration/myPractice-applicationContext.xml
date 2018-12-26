@@ -7,12 +7,12 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:pl/fraczek/practices/bikeCoach.properties"/>
+    <context:property-placeholder location="classpath:pl/fraczek/spring/practices/bikeParticipant.properties"/>
     <!-- Define your beans here -->
     <bean id="myFortune" class="pl.fraczek.spring.practices.fortune.RandomFortune">
     </bean>
 
-    <bean id="myCoach" class="pl.fraczek.spring.practices.coaches.MyBikeCoach"
+    <bean id="myParticipant" class="pl.fraczek.spring.practices.coaches.BikeParticipant"
           init-method="hello"
           destroy-method="goodbye"
           scope="prototype">

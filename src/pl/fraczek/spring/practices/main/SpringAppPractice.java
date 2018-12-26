@@ -1,7 +1,7 @@
 package pl.fraczek.spring.practices.main;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import pl.fraczek.spring.practices.coaches.MyBikeCoach;
+import pl.fraczek.spring.practices.coaches.BikeParticipant;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -16,17 +16,17 @@ public class SpringAppPractice {
 
         try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("pl/fraczek/spring/practices/configuration/myPractice-applicationContext.xml")) {
 
-            final MyBikeCoach coach = context.getBean("myCoach", MyBikeCoach.class);
+            final BikeParticipant participant = context.getBean("myParticipant", BikeParticipant.class);
             printTime();
-            System.out.println(coach);
-            System.out.println(coach.getDailyWorkout());
-            System.out.println(coach.getDailyFortune());
+            System.out.println(participant);
+            System.out.println(participant.myDailyPractice());
+            System.out.println(participant.myDailyFortune());
 
-            final MyBikeCoach anotherCoach = context.getBean("myCoach", MyBikeCoach.class);
+            final BikeParticipant anotherParticipant = context.getBean("myParticipant", BikeParticipant.class);
             printTime();
-            System.out.println(anotherCoach);
-            System.out.println(anotherCoach.getDailyWorkout());
-            System.out.println(anotherCoach.getDailyFortune());
+            System.out.println(anotherParticipant);
+            System.out.println(anotherParticipant.myDailyPractice());
+            System.out.println(anotherParticipant.myDailyFortune());
         }
     }
 
