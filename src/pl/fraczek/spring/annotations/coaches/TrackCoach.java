@@ -23,7 +23,7 @@ public class TrackCoach implements Coach {
     }
 
     @Autowired
-    void setFortuneService(final FortuneService fortuneService) {
+    void anyNameForMethod(final FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
 }
