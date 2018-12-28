@@ -1,6 +1,7 @@
 package pl.fraczek.spring.annotations.coaches;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import pl.fraczek.spring.annotations.services.FortuneService;
 
@@ -11,6 +12,7 @@ import pl.fraczek.spring.annotations.services.FortuneService;
 public class VolleyballCoach implements Coach {
 
     @Autowired
+    @Qualifier("randomFortuneService")
     private FortuneService fortuneService;
 
     @Override

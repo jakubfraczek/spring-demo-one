@@ -1,6 +1,7 @@
 package pl.fraczek.spring.annotations.coaches;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import pl.fraczek.spring.annotations.services.FortuneService;
 
@@ -23,6 +24,7 @@ public class TrackCoach implements Coach {
     }
 
     @Autowired
+    @Qualifier("happyFortuneService")
     void anyNameForMethod(final FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
