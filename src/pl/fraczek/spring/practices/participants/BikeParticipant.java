@@ -1,5 +1,7 @@
-package pl.fraczek.spring.practices.coaches;
+package pl.fraczek.spring.practices.participants;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import pl.fraczek.spring.demo.fortune.FortuneService;
 
 /**
@@ -22,6 +24,8 @@ public class BikeParticipant implements Participant {
         return "Bike 100 km!";
     }
 
+    @Autowired
+    @Qualifier("fileFortuneService")
     public String myDailyFortune() {
         return fortuneService.getFortune();
     }

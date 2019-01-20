@@ -1,7 +1,7 @@
 package pl.fraczek.spring.practices.main;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import pl.fraczek.spring.practices.coaches.BikeParticipant;
+import pl.fraczek.spring.practices.participants.BikeParticipant;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

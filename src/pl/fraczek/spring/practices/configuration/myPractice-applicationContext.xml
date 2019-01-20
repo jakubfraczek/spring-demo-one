@@ -12,7 +12,7 @@
     <bean id="myFortune" class="pl.fraczek.spring.practices.fortune.RandomFortune">
     </bean>
 
-    <bean id="myParticipant" class="pl.fraczek.spring.practices.coaches.BikeParticipant"
+    <bean id="myParticipant" class="pl.fraczek.spring.practices.participants.BikeParticipant"
           init-method="hello"
           destroy-method="goodbye"
           scope="prototype">
